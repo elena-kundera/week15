@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 14</title>
+<style>
+    .magic {
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 50%;
+        height: 100px;
+        width: 30em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .img {
+        max-width: 20%;
+    }
+
+    .arrow:hover {
+        filter: drop-shadow(5px 5px 5px #222);
+    }
+
+
+</style>
+
+</head>
+
+
+
+<body>
+    
+<div>
+<input id="inputHi" type="text" placeholder="Как тебя зовут?">
+<button onclick="getInputValue()" id="btnHi">Поздороваться</button>
+<hr>
+
+<div class="data"></div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="calcul">
+
+
+<input id="calcInput1" type="text" placeholder="Первое число">
+<input id="calcInput2" type="text" placeholder="Второе число">
+<button onclick="getCalcValuePlus(), clearAll ()">+</button>
+<button onclick="getCalcValueMinus(), clearAll ()">-</button>
+<button onclick="getCalcValueMult(), clearAll ()">*</button>
+<button onclick="getCalcValueDivis(), clearAll ()">/</button>
+<hr>
+<div class="calcData"></div>
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="magic" id="divColor" onclick="changeColor()"> 
+    <p> Кликни сюда -  и будет магия !</p> 
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="imgContainer">
+
+<img class="img arrow" onclick="previousPic()" src="assets/images/iconmonstr-arrow-left-alt-filled-240.png" alt="">
+<img class="img img1" id="imgSwear" src="assets/images/IMG_5068.jpg" alt="">
+
+<img class="img arrow" onclick="nextPic()" src="assets/images/iconmonstr-arrow-right-alt-filled.svg" alt="">
+
+</div>
+
+
+
+
+
+
+    <script src="index.js"> </script>
+</body>
+</html>
