@@ -6,8 +6,6 @@
 // каждого поля придумайте самостоятельно. Если все заполнено верно, то выведите "Добро пожаловать,
 //  *имя пользователя*!".
 
-// 3. Сделайте страничку с возможность выбора темы из выпадающего списка (например, темная, белая, 
-//     синяя). После выбора темы меняйте фон документа согласно выбранному цвету.
 
 
 // КАЛЬКУЛЯТОР 
@@ -70,7 +68,7 @@ function clearAll () {
 
 //ВЫБОР ТЕМЫ
 
-const Theme = document.getElementById('calcTheme');
+const Theme = document.querySelector('#calcTheme');
 
 function choose () {
     const chooseTheme = Theme.value;
@@ -80,5 +78,6 @@ function choose () {
         case 'dark' : document.body.style.backgroundColor = '#2A3759'; break;
         case 'kawai' : document.body.style.backgroundColor = '#FEB9C6'; break;
         case 'green' : document.body.style.backgroundColor = '#AEC09A'; break;
+        default : document.body.style.backgroundColor = '#ffffff'; break;
     }
 }
