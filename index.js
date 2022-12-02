@@ -1,21 +1,18 @@
 
 
-// ЗДОРОВАЛКА
+// 2. Сделайте красивую форму регистрации из любого используемого вами сервиса (минимум 5 
+// полей ввода), например, регистрация в Яндексе, Гугле или на любом другом сайте. Если какое-то 
+// из полей не заполнено или заполнено неверно, выводите сообщение об ошибке. Условия проверки для 
+// каждого поля придумайте самостоятельно. Если все заполнено верно, то выведите "Добро пожаловать,
+//  *имя пользователя*!".
 
-const data = document.querySelector('.data');
-const inputPage = document.getElementById("inputHi");
-const btnPage = document.getElementById("btnHi");
+// 3. Сделайте страничку с возможность выбора темы из выпадающего списка (например, темная, белая, 
+//     синяя). После выбора темы меняйте фон документа согласно выбранному цвету.
 
 
-function getInputValue() {
-
-    const userName = document.getElementById("inputHi").value;
-    data.innerHTML = "Привет, " + userName + ", приятно познакомиться!";
-    document.getElementById("inputHi").value = "";
-
-}
-
-// КАЛЬКУЛЯТОР
+// КАЛЬКУЛЯТОР 
+// Добавила на ноль делить нельзя, сказала ему не считать, елси поля не заполнены и
+// вывела очищение инпутов из предыдущего урока в отдельную ф-цию
 
 const data2 = document.querySelector('.calcData');
 const inputOne = document.getElementById("calcInput1");
@@ -56,6 +53,11 @@ function getCalcValueDivis() {
     else {
     data2.innerHTML = "Ответ: " + result;
     }
+
+    if (num1 == "" || num2 == "")
+    {
+        data2.innerHTML = "Здесь что-то не так"
+    }
 }
 
 function clearAll () {
@@ -63,23 +65,20 @@ function clearAll () {
     document.getElementById("calcInput2").value = "";
 }
 
-function changeColor ()
-{
-    let newColor = document.getElementById('divColor');
-    newColor.style.background = 'radial-gradient(violet 10%, pink 30%, blue)';
-    setTimeout(() => newColor.style.background = "", 1500);
-}
 
 
-//ГАЛЕРЕЯ
 
-function nextPic() {
+//ВЫБОР ТЕМЫ
 
-    let newPic = document.getElementById('imgSwear');
-    newPic.src = 'assets/images/IMG_5069.jpg';
-}
+const Theme = document.getElementById('calcTheme');
 
-function previousPic() {
-    let prevPic = document.getElementById("imgSwear");
-    prevPic.src = 'assets/images/IMG_5070.jpg';
+function choose () {
+    const chooseTheme = Theme.value;
+    switch (chooseTheme) 
+    {
+        case 'milk' : document.body.style.backgroundColor = '#f9f4e6'; break;
+        case 'dark' : document.body.style.backgroundColor = '#2A3759'; break;
+        case 'kawai' : document.body.style.backgroundColor = '#FEB9C6'; break;
+        case 'green' : document.body.style.backgroundColor = '#AEC09A'; break;
+    }
 }
