@@ -8,7 +8,32 @@
 
 <style>
     
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.input {
+    margin-bottom: 15px;
+    height: 40px;
+    width: 350px;
+}
+
+.registrationBtn {
+    margin-bottom: 15px;
+    height: 40px;
+    width: 200px;
+    text-transform: uppercase;
+
+}
+
+.errorMsg {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    background-color: rgb(211, 136, 211);
+}
 
 
 </style>
@@ -63,14 +88,43 @@
 <br>
 <br>
 
-<form action="">
+
+    <div class="container">
+        <h1>Форма регистрации</h1>
+        <hr>
+
+        <label for="firstName"><b>Ваше имя</b></label>
+        <input class="input" id="firstName" type="text" placeholder="Введите ваше имя" name="firstname" required>
+        <div class="errorMsg" id="smthWrong_firstName"></div>
+
+        <label for="lastName"><b>Ваша фамилия</b></label>
+        <input class="input" id="lastName" type="text" placeholder="Введите вашу фамилию" name="lastname" required>
+        <div class="errorMsg" id="smthWrong_lastName"></div>
+
+        <label for="email"><b>Email</b></label>
+        <input class="input" id="email" type="text" placeholder="Введите вашу почту" name="email" required>
+        <div class="errorMsg" id="smthWrong_email"></div>
+
+        <label for="psw"><b>Пароль</b></label>
+        <input class="input" id="password" type="password" placeholder="Введите пароль" name="psw" required>
+        <div class="errorMsg" id="smthWrong_password"></div>
+
+        <label for="psw-repeat"><b>Повторить пароль</b></label>
+        <input class="input" id="checkPassword" type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+        <div class="errorMsg" id="smthWrong_checkPassword"></div>
+
+        <button class="registrationBtn" onclick="check()">Зарегистрироваться</button>
+
+        <div id="welcomeMsg"></div>
+</div>
 
 
 
-</form>
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 

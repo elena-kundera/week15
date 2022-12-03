@@ -81,3 +81,57 @@ function choose () {
         default : document.body.style.backgroundColor = '#ffffff'; break;
     }
 }
+
+
+// ФОРМА РЕГИСТРАЦИИ 
+
+
+const firstName = document.querySelector("#firstName");
+const lastName = document.querySelector("#lastName");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
+const checkPassword = document.querySelector("#checkPassword");
+
+function check()
+{
+    document.querySelector('#smthWrong_firstName').innerHTML = "";
+    document.querySelector('#smthWrong_lastName').innerHTML = "";
+    document.querySelector('#smthWrong_email').innerHTML = "";
+    document.querySelector('#smthWrong_password').innerHTML = "";
+    document.querySelector('#smthWrong_checkPassword').innerHTML = "";
+    document.querySelector("#welcomeMsg").innerHTML = "";
+if (firstName.value == '')
+{document.querySelector('#smthWrong_firstName').innerHTML+= "Это обязательное поле";
+}
+
+if (lastName.value == '')
+{document.querySelector('#smthWrong_lastName').innerHTML+= "Это обязательное поле";
+}
+
+if (email.value == '')
+{document.querySelector('#smthWrong_email').innerHTML+= "Это обязательное поле";
+}
+
+if (password.value == '')
+{document.querySelector('#smthWrong_password').innerHTML+= "Это обязательное поле";
+}
+
+if (checkPassword.value == '')
+{document.querySelector('#smthWrong_checkPassword').innerHTML+= "Это обязательное поле";
+}
+
+if (password.value != checkPassword.value)
+{document.querySelector('#smthWrong_checkPassword').innerHTML+= "Ваши пароли не совпадают";
+}
+
+else 
+{
+    document.querySelector("#welcomeMsg").innerHTML+= "Добро пожаловать в систему, " + firstName.value + "!!!";
+    firstName.value = '';
+    lastName.value = '';
+    email.value = '';
+    password.value = '';
+    checkPassword.value = '';
+}
+
+}
